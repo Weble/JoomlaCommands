@@ -1,5 +1,8 @@
 <?php
 
+namespace Weble\JoomlaCommands\Commands;
+
+use Joomla\CMS\Factory;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputInterface;
@@ -18,7 +21,7 @@ class GetConfigCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $rows = [];
-        foreach (JFactory::getConfig() as $key => $value) {
+        foreach (Factory::getConfig() as $key => $value) {
             $rows[] = [
                 $key,
                 $value

@@ -35,3 +35,4 @@
 
 # CUSTOM!
 !/bin/console
+!plugins/console

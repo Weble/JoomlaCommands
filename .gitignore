@@ -32,3 +32,6 @@
 /robots.txt
 /web.config.txt
 .idea
+
+# CUSTOM!
+!/bin/console

@@ -1,0 +1,11 @@
+{
+    "name": "weble/joomla-commands",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3",
+        "symfony/console": "^5.0"
+    },
+    "config": {
+        "vendor-dir": "libraries/joomla-commands/vendor"
+    }
+}

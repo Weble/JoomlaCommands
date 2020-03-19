@@ -45,7 +45,7 @@ Console Application based on Symfony Console to add a single entrypoint to execu
        | offset                  | UTC                                                                              |
        | mailonline              | 1                                                                                |
        | mailer                  | mail                                                                             |
-       | mailfrom                | email@example.com                                                                 |
+       | mailfrom                | email@example.com                                                                |
        | fromname                | Joomla Commands                                                                  |
        | sendmail                | /usr/sbin/sendmail                                                               |
        | smtpauth                | 0                                                                                |
@@ -70,8 +70,8 @@ Console Application based on Symfony Console to add a single entrypoint to execu
        | unicodeslugs            | 0                                                                                |
        | feed_limit              | 10                                                                               |
        | feed_email              | none                                                                             |
-       | log_path                | /var/www/joomlacommands/administrator/logs                           |
-       | tmp_path                | /var/www/joomlacommands/tmp                                          |
+       | log_path                | /var/www/joomlacommands/administrator/logs                                       |
+       | tmp_path                | /var/www/joomlacommands/tmp                                                      |
        | lifetime                | 15                                                                               |
        | session_handler         | database                                                                         |
        | shared_session          | 0                                                                                |

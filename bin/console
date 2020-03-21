@@ -22,7 +22,7 @@ require_once JPATH_CONFIGURATION . '/configuration.php';
 $config = new JConfig;
 define('JDEBUG', $config->debug);
 
-require JPATH_LIBRARIES . '/joomla-commands/vendor/autoload.php';
+require_once JPATH_LIBRARIES . '/joomla-commands/vendor/autoload.php';
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;

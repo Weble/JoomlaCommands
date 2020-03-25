@@ -2,6 +2,8 @@
 
 Console Application based on Symfony Console to add a single entrypoint to execute custom commands via CLI through plugins.
 
+# WARNING: This is still in development. Use at your own risk, and feel free to PR any changes you see fit!
+
 ## Executing Commands
 
 ```php bin/console list```
@@ -82,13 +84,15 @@ Console Application based on Symfony Console to add a single entrypoint to execu
 To add new commands, create a Joomla! plugin in the **console** group, and enable it.
 Then add a ```onGetConsoleCommands``` method. That method will receive the Symfony Application as a parameter, and you can add commands to it.
 
+You command should extend the ```Symfony\Component\Console\Command\Command``` class. You also have access to the standard joomla application through the usual methods, like ```\JFactory::getApplication```, ```\JFactory::getConfig()``` etc.
+
 Check the Config Command Plugin as an example:
 
 ```php
 public function onGetConsoleCommands(Symfony\Component\Console\Application $console)
 {
     $console->addCommands([
-        new GetConfigCommand()
+        new \Weble\JoomlaCommands\Commands\GetConfigCommand()
     ]);
 }
 ```

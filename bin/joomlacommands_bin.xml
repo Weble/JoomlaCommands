@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="2.5" method="upgrade">
+    <!-- Please use a unique name to make uninstall to work. Should be identical to your manifest filename. -->
+    <name>joomlacommands_bin</name>
+    <author>Weble Srl</author>
+    <version>1.0.0</version>
+    <creationDate>April 2020</creationDate>
+    <copyright>(C) 2020 Weble Srl</copyright>
+    <license>MIT</license>
+    <authorEmail>daniele@weble.it</authorEmail>
+    <authorUrl>http://www.weble.it</authorUrl>
+    <description>Joomla Commands executable</description>
+
+    <!-- Fileset definition -->
+    <fileset>
+        <!-- back-end -->
+        <files folder="/" target="bin/">
+            <filename>console</filename>
+        </files>
+    </fileset>
+</extension>

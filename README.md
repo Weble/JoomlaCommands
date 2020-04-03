@@ -2,7 +2,9 @@
 
 Console Application based on Symfony Console to add a single entrypoint to execute custom commands via CLI through plugins.
 
-# WARNING: This is still in development. Use at your own risk, and feel free to PR any changes you see fit!
+## Installation
+
+Download [a release here on github](https://github.com/Weble/JoomlaCommands/releases) and install it using Joomla Installer.
 
 ## Executing Commands
 
@@ -96,3 +98,7 @@ public function onGetConsoleCommands(Symfony\Component\Console\Application $cons
     ]);
 }
 ```
+
+## Build from source
+
+```./build.sh```

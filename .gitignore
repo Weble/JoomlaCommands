@@ -35,4 +35,11 @@
 
 # CUSTOM!
 !/bin/console
+!/bin/joomlacommands_bin.xml
 !plugins/console
+build/*
+!build/packages
+build/packages/*
+!build/pkg_joomlacommands.xml
+node_modules
+package-lock.json

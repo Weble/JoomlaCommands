@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" version="3.9" method="upgrade">
+    <!-- Please use a unique name to make uninstall to work. Should be identical to your manifest filename. -->
+    <name>Joomla Commands - Library</name>
+    <libraryname>joomla-commands</libraryname>
+    <author>Weble Srl</author>
+    <version>1.0.0</version>
+    <creationDate>April 2020</creationDate>
+    <copyright>(C) 2020 Weble Srl</copyright>
+    <license>MIT</license>
+    <authorEmail>daniele@weble.it</authorEmail>
+    <authorUrl>http://www.weble.it</authorUrl>
+    <description>Joomla Commands - Library</description>
+
+    <files>
+        <folder>vendor</folder>
+        <file>joomla-commands.xml</file>
+    </files>
+</extension>

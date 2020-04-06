@@ -24,21 +24,14 @@ define('JDEBUG', $config->debug);
 
 require_once JPATH_LIBRARIES . '/joomla-commands/vendor/autoload.php';
 
-use Joomla\CMS\Factory;
-use Joomla\CMS\Plugin\PluginHelper;
-use Symfony\Component\Console\Application;
+use Weble\JoomlaCommands\Application\Application;
 
 class ApplicationConsole extends JApplicationCli
 {
     public function doExecute()
     {
-        Factory::$application = $this;
-
         $application = new Application();
-
-        PluginHelper::importPlugin('console', null, true, $this->dispatcher);
-        $this->triggerEvent('onGetConsoleCommands', [$application]);
-
+        $application->setJoomlaCliApplication($this);
         $application->run();
     }
 }

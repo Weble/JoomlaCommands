@@ -41,6 +41,8 @@ build/*
 !build/packages
 build/packages/*
 !build/pkg_joomlacommands.xml
+!libraries/joomla-commands
+libraries/joomla-commands/vendor
 node_modules
 package-lock.json
 .DS_Store

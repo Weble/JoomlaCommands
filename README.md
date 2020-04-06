@@ -10,6 +10,10 @@ Download [a release here on github](https://github.com/Weble/JoomlaCommands/rele
 
 ```php bin/console list```
 
+By default the commands are run using the Joomla "Site" application (ie: as if they where run in a component in the joomla frontend), but you can specify which application client should be used with a ```--client=``` flag.
+
+```php bin/console config --client=administrator```
+
 ## Available Commands
 
 - ```php bin/console config``` -  Dumps the configuration file in a table.

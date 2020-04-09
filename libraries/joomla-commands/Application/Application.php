@@ -6,6 +6,8 @@ use Joomla\CMS\Application\CliApplication;
 use Joomla\CMS\Application\CMSApplication;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;
+use Joomla\Registry\Registry;
+use Joomla\Uri\Uri;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -30,6 +32,7 @@ class Application extends \Symfony\Component\Console\Application
         $this->output = $output;
 
         $this->configureJoomlaApplication();
+        $this->fixUriIssues();
         $this->loadCommandsFromPlugins();
 
 
@@ -54,5 +57,20 @@ class Application extends \Symfony\Component\Console\Application
     {
         PluginHelper::importPlugin('console', null, true);
         $this->joomlaCliApplication->triggerEvent('onGetConsoleCommands', [$this]);
+    }
+
+    /**
+     * Here we try to fix any action (like using JRoute::_) inside a queued message
+     * Since we run in cli, we don't have access to the request, and jroute can't guess things
+     * like current uri, host, etc.
+     * So we take the configured domain in your SEF plugin (which you should have populate to fix possible
+     * SEO issues anyway) and use that as a HOST.
+     */
+    protected function fixUriIssues(): void
+    {
+        $params = new Registry(PluginHelper::getPlugin('system', 'sef')->params);
+        $uri = new Uri($params->get('domain', ''));
+        $_SERVER['REQUEST_URI'] = '/';
+        $_SERVER['HTTP_HOST'] = $uri->getHost();
     }
 }

@@ -4,7 +4,7 @@
     <name>Joomla Commands - Library</name>
     <libraryname>joomla-commands</libraryname>
     <author>Weble Srl</author>
-    <version>1.0.0</version>
+    <version>1.2.2</version>
     <creationDate>April 2020</creationDate>
     <copyright>(C) 2020 Weble Srl</copyright>
     <license>MIT</license>
@@ -13,6 +13,7 @@
     <description>Joomla Commands - Library</description>
 
     <files>
+        <folder>Application</folder>
         <folder>vendor</folder>
         <file>joomla-commands.xml</file>
     </files>

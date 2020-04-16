@@ -47,7 +47,7 @@ class Application extends \Symfony\Component\Console\Application
 
     protected function configureJoomlaApplication()
     {
-        $clientId = $this->input->hasParameterOption(['--ansi'], true) ?: 'site';
+        $clientId = $this->input->hasParameterOption(['--site'], true) ?: 'site';
         $application = CMSApplication::getInstance($clientId);
 
         Factory::$application = $application;
@@ -55,6 +55,7 @@ class Application extends \Symfony\Component\Console\Application
 
     protected function loadCommandsFromPlugins()
     {
+        PluginHelper::importPlugin('system', null, true);
         PluginHelper::importPlugin('console', null, true);
         $this->joomlaCliApplication->triggerEvent('onGetConsoleCommands', [$this]);
     }

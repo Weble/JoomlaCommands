@@ -2,8 +2,8 @@
 <extension type="package" method="upgrade" version="3.0">
     <name>Joomla Commands</name>
     <description>Symfony Console Commands in Joomla!</description>
-    <author>Hello World Package Team</author>
-    <version>1.1.0</version>
+    <author>Weble Srl</author>
+    <version>1.2.2</version>
     <packagename>joomlacommands</packagename>
     <creationDate>April 2020</creationDate>
     <url>https://github.com/Weble/JoomlaCommands</url>

@@ -69,9 +69,14 @@ class Application extends \Symfony\Component\Console\Application
      */
     protected function fixUriIssues(): void
     {
+        $domain = 'https://localhost/';
+
         $params = new Registry(PluginHelper::getPlugin('system', 'sef')->params);
-        $uri = new Uri($params->get('domain', ''));
+        $domain = $params->get('domain') ?: $domain;
+        $uri = new Uri($domain);
+
         $_SERVER['REQUEST_URI'] = '/';
         $_SERVER['HTTP_HOST'] = $uri->getHost();
+        $_SERVER['HTTPS'] = stripos($domain, 'https') === 0;
     }
 }

@@ -2,8 +2,8 @@
     "name": "weble/joomla-commands",
     "license": "MIT",
     "require": {
-        "php": "^7.3",
-        "symfony/console": "^5.0"
+        "php": "^7.4 || ^8.0",
+        "symfony/console": "^5.4"
     },
     "autoload": {
         "psr-4": {
@@ -11,6 +11,9 @@
         }
     },
     "config": {
-        "vendor-dir": "libraries/joomla-commands/vendor"
+        "vendor-dir": "libraries/joomla-commands/vendor",
+        "platform": {
+            "php": "7.4.22"
+        }
     }
 }
